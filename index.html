@@ -124,7 +124,7 @@
 
     <!-- Scroll Animation Background -->
     <div class="animation-container">
-        <img id="scrollAnimation" src="frames/ezgif-frame-001.jpg" alt="Animation Background">
+        <img id="scrollAnimation" src="frame/ezgif-frame-001.jpg" alt="Animation Background">
     </div>
 
     <div class="container">
@@ -229,19 +229,19 @@
     <!-- Scroll Animation Script -->
     <script>
         const img = document.getElementById("scrollAnimation");
-        const totalFrames = 240;
+        const totalFrame = 240;
 
         window.addEventListener("scroll", () => {
             const scrollTop = window.scrollY;
             const docHeight = document.body.scrollHeight - window.innerHeight;
             const scrollFraction = scrollTop / docHeight;
             const frameIndex = Math.min(
-                totalFrames - 1,
+                totalFrame - 1,
                 Math.floor(scrollFraction * totalFrames)
             );
 
             const frameNumber = String(frameIndex + 1).padStart(3, '0');
-            img.src = `frames/ezgif-frame-${frameNumber}.jpg`;
+            img.src = `frame/ezgif-frame-${frameNumber}.jpg`;
         });
     </script>
 
